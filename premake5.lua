@@ -16,9 +16,14 @@ project "ImGui"
         "imstb_rectpack.h",
         "imstb_textedit.h",
         "imstb_truetype.h",
-        "imgui_demo.cpp"
+        "imgui_demo.cpp",
+        "imgui_tables.cpp"
     }
     
+    filter "system:windows"
+        buildoptions  {
+            "/MP" --多核编译
+        } 
 	filter "system:windows"
         systemversion "latest"
         cppdialect "C++17"
